@@ -1,16 +1,30 @@
 # getEnv-dotenv
 
+
 > [!NOTE]
 > Easy dotenv
 
-`npm i getenv-dotenv`
 
-> [!TIP]
-> Helpful advice for doing things better or more easily.
+```npm i getenv-dotenv```
 
 ## Getting Started
 ```
-import { env } from 'getenv-dotenv'
+import getEnv, { env } from 'getenv-dotenv'
+```
+### getOne value
+```
+env.getOne('value')
+
+console.log(env.getOne('PORT'))
+```
+### Seting Path
+```
+getEnv(['.env.local', '.env'])
 ```
 
-
+ 
+### Lists value env file
+```
+env.getAll()
+console.log(env.getAll())
+```

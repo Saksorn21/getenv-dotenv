@@ -16,7 +16,7 @@
     "dotenv",
     "getenv"
   ],
-  "author": "saksorn",
+  "author": "saksorn (https://github.com/Saksorn21)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Saksorn21/getenv-dotenv/issues"
