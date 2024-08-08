@@ -1,14 +1,9 @@
 import dotenv from 'dotenv' 
-dotenv.config()
+//dotenv.config()
 declare type Env = {
   [key: string | number | symbol]: string | number | undefined
 }
-declare type Envtype = {
-  // { [key: string]: string }
-  get(nameEnv: string | number | undefined): void;
-  getAll(): void;
-}
-   const getEnv = (pathFile?: string[] ) => {
+const getEnv = (pathFile?: string[] ) => {
      !pathFile && dotenv.config()
        const path = dotenv.config({ path: pathFile })
      path
@@ -16,4 +11,29 @@ declare type Envtype = {
        
 }
 export default getEnv
-getEnv(['.env.local'])
+
+type PropEnv = string | number | symbol
+declare type Envtype = {
+  getOne(nameEnv: PropEnv): void;
+  getAll(): void;
+}
+
+const getOneEnv = (nameEnv: string) => {
+
+  const env = process.env[nameEnv]
+  !env && console.error(`Environment variable ${nameEnv} is not defined`)
+  
+  return env
+}
+const getAllEnv = () => {
+  const env = process.env
+  return env
+}
+
+export const env: Envtype = {
+  getOne: getOneEnv,
+  getAll: getAllEnv,
+
+}
+
+
