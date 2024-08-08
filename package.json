@@ -1,5 +1,5 @@
 {
-  "name": "gitenv-dotenv",
+  "name": "getenv-dotenv",
   "version": "1.0.0",
   "description": "base dotenv Ts",
   "main": "dist/index.js",
@@ -25,11 +25,9 @@
   "devDependencies": {
     "@types/node": "22.1.0",
     "typescript": "^5.5.4",
-    "npm": "^10.8.2",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "zod": "^3.23.8"
   }
 }
