@@ -1,19 +1,16 @@
-# getEnv/dotenv
+# getEnv-dotenv
 
+> [!NOTE]
+> Easy dotenv
+
+`npm i getenv-dotenv`
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
 
 ## Getting Started
 ```
 import { env } from 'getenv-dotenv'
 ```
 
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 

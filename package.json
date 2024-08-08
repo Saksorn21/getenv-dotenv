@@ -1,7 +1,7 @@
 {
   "name": "getenv-dotenv",
   "version": "1.0.0",
-  "description": "base dotenv Ts",
+  "description": "easy! dotenv",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
