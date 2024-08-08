@@ -9,7 +9,7 @@
     "rootDir": "./",
     "moduleResolution": "node16",
       "allowJs": true,
-    "checkJs": true,
+    "checkJs": false,
     "outDir": "./dist",
     "strict": true,
     "skipLibCheck": true

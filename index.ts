@@ -1,7 +1,7 @@
 import dotenv from 'dotenv' 
-//dotenv.config()
+
 declare type Env = {
-  [key: string | number | symbol]: string | number | undefined
+  [key: string | number | symbol]: PropEnv
 }
 const getEnv = (pathFile?: string[] ) => {
      !pathFile && dotenv.config()
