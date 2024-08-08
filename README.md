@@ -5,7 +5,9 @@
 > Easy dotenv
 
 
-```npm i getenv-dotenv```
+```
+npm i getenv-dotenv
+```
 
 ## Getting Started
 ```
