@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 20",
+  "_version": "20.1.0",
+  "compilerOptions": {
+    "target": "es2022",         
+    "lib": ["es2023"],
+    "module": "node16",
+    "rootDir": "./",
+    "moduleResolution": "node16",
+      "allowJs": true,
+    "checkJs": true,
+    "outDir": "./dist",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*",
+    "src/**/*.ts"
+  ]
+}
