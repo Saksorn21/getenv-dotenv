@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "easy! dotenv",
   "main": "dist/index.js",
+  "type": "module",
   "types": "dist/index.d.ts",
+  "bin": {  
+    "getenv": "./bin/index.js"  
+  },
   "scripts": {
     "build": "tsc"
   },
@@ -24,10 +28,12 @@
   "homepage": "https://github.com/Saksorn21/getenv-dotenv#readme",
   "devDependencies": {
     "@types/node": "22.1.0",
-    "typescript": "^5.5.4",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "tsd": "^0.31.1",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
+    "chalk": "^5.3.0",
     "dotenv": "^16.4.5"
   }
 }

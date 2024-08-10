@@ -7,12 +7,17 @@
     "lib": ["es2023"],
     "module": "node16",
     "rootDir": "./",
-    "moduleResolution": "node16",
+    "moduleResolution": "nodenext",  
       "allowJs": true,
     "checkJs": false,
     "outDir": "./dist",
     "strict": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": false,
+    "allowImportingTsExtensions": false,
+  },
+  "include": [
+    "./*.ts",
+    "./lib/**/*.ts"
+  ]
   
 }
