@@ -1,5 +1,5 @@
 const test = (name) => {
-  console.log(name);
-  return name;
+  console.log(name)
+  return name
 }
-export default test;
+export default test
