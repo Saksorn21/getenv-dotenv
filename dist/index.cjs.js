@@ -13,6 +13,7 @@ const getEnv = (pathFile) => {
   
   return path
 }; 
+const config = getEnv()
 const getOneEnv = (nameEnv) => {
   const env = process.env[nameEnv];
   !env && console.error(`Environment variable ${nameEnv} is not defined`);
@@ -85,19 +86,22 @@ const env = {
 };
 const MainModule = {
   env,
-  getOneEnv,
-  getAllEnv,
-  getIdxEnv,
-  getEnv,
-  getLocalEnv
+  getOne: getOneEnv,
+  getAll: getAllEnv,
+  getIdx: getIdxEnv,
+  config: getEnv,
+ getEnv: getEnv,
+getLocal: getLocalEnv
   
 }
-module.exports.default = getEnv
-module.exports.env = env
-module.exports.getAllEnv = getAllEnv
-module.exports.getIdxEnv = getIdxEnv
-module.exports.getOneEnv = getOneEnv
-module.exports.getLocalEnv = getLocalEnv;
+
+
+module.exports.getAll = MainModule.getAll
+module.exports.getIdx = MainModule.getIdx
+module.exports.getOne = MainModule.getOne
+module.exports.config = MainModule.config
+module.exports.getLocal = MainModule.getLocal;
+
 module.exports = MainModule
 
 

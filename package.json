@@ -1,15 +1,27 @@
 {
   "name": "getenv-dotenv",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "easy! dotenv",
-  "main": "dist/index.js",
   "type": "module",
-  "types": "dist/index.d.ts",
-  "bin": {  
-    "getenv": "./bin/index.js"  
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs.js",
+      "default": "./dist/index.js"
+   }
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "rollup": "rollup -c",
+    "lint": "standard --fix",
+    "lint-readme": "standard-markdown",
+     "testmocha": "mocha",
+    "coverage": "nyc npm run test",
+    "test": "jest",
+    "testtype": "tsd ",
+    "testdev": "nodemon ./testdev/index.js "
   },
   "repository": {
     "type": "git",
@@ -18,7 +30,13 @@
   "keywords": [
     "env",
     "dotenv",
-    "getenv"
+    "getenv",
+    ".env",
+    "environment",
+    "config",
+    "settings",
+    "backend",
+    "back-end"
   ],
   "author": "saksorn (https://github.com/Saksorn21)",
   "license": "ISC",
@@ -28,12 +46,26 @@
   "homepage": "https://github.com/Saksorn21/getenv-dotenv#readme",
   "devDependencies": {
     "@types/node": "22.1.0",
+    "jest": "^29.7.0",
+    "nyc": "^17.0.0",
+    "rollup": "^4.20.0",
+    "standard": "^17.1.0",
     "ts-node": "^10.9.2",
     "tsd": "^0.31.1",
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "chalk": "^5.3.0",
-    "dotenv": "^16.4.5"
-  }
+    "@rollup/plugin-json": "^6.1.0",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4",
+    "standard-markdown": "^7.1.0"
+  },
+  "extends":"@istanbuljs/schema/default-exclude",
+  "all": true,
+  "include": [
+    "dist/**/*.js"
+  ],
+  "exclude": [
+    "**/*.spec.js"
+  ]
 }
