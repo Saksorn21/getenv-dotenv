@@ -1,4 +1,4 @@
-# getEnv-dotenv v1.0.2
+# getEnv-dotenv 
 
 
 > [!NOTE]
@@ -17,7 +17,7 @@ import getEnv, { env } from 'getenv-dotenv'
 getEnv('.env')
 
 CommonJs
-const env = require(getenv-dotenv')
+const env = require('getenv-dotenv')
 env.config('.env')
 ```
 # ESmodule
